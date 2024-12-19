@@ -17,13 +17,16 @@ public class CustomerServiceApplication {
 	@Bean
 	CommandLineRunner commandLineRunner(CustomerRepo customerRepo){
 		return args -> {
-			customerRepo.save(Customer.builder()
-					.id(1)
-					.name("amine")
-					.email("aminekabli@gmail.com")
-							.phone("069554555555")
-					.build());
+			for(int i=0;i<3;i++){
+				Customer c=Customer.builder()
+						.id(i)
+						.name("amine"+i)
+						.email("aminekabli"+1+"@gmail.com")
+						.phone("06"+i)
+						.build();
+				customerRepo.save(c);
+			}
 		};
-	}
+	};
 
 }
