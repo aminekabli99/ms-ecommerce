@@ -14,7 +14,6 @@
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/billing-service/pom.xml" />
         <option value="$PROJECT_DIR$/gatway-service2/pom.xml" />
       </set>
     </option>

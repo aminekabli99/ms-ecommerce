@@ -16,6 +16,7 @@
         </processorPath>
         <module name="discovery-service" />
         <module name="gateway-service" />
+        <module name="billing-service" />
       </profile>
       <profile name="Annotation profile for inventory-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -24,12 +25,20 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
-        <module name="customer-service" />
         <module name="inventory-service" />
+      </profile>
+      <profile name="Annotation profile for customer-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="customer-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="billing-service" target="21" />
       <module name="gatway-service2" target="21" />
     </bytecodeTargetLevel>
   </component>
