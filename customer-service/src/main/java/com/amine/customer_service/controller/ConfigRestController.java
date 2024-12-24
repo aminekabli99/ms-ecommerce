@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 public class ConfigRestController {
-    @Value("${global.params.p1}")
+    @Value("${customer-service.params.x}")
     private String p1;
-    @Value("${global.params.p2}")
+    @Value("${customer-service.params.x}")
     private String p2;
 
     @GetMapping("/testConfig1")
